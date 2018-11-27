@@ -1,3 +1,8 @@
+# chinese-telegraph
+
+## usage
+
+```go
 package main
 
 import (
@@ -14,5 +19,12 @@ func main() {
 	test = append(test, uint(7193))
 	test = append(test, uint(1032))
 
+
 	fmt.Println(converter.GetString(test))
 }
+```
+
+Result:
+```$xslt
+中文电报
+```

@@ -25,3 +25,11 @@ func (converter *Converter) GetCharacter(index uint) rune {
 func (converter *Converter) GetCharacterString(index uint) string {
 	return string(converter.src[index])
 }
+
+func (converter *Converter) GetString(index []uint) string {
+	target := make([]rune, 0, len(index))
+	for _, i := range index {
+		target = append(target, converter.GetCharacter(i))
+	}
+	return string(target)
+}
